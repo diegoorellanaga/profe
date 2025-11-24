@@ -17,7 +17,7 @@ export const procedureData = {
       number: "3",
       icon: "💻",
       title: "Clase Personalizada", 
-      description: "Nos conectamos online o nos vemos presencial para la clase 100% adaptada a ti"
+      description: "Nos conectamos online para la clase 100% adaptada a ti"
     },
     {
       number: "4",

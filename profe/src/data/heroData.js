@@ -3,7 +3,7 @@ export const heroData = {
   subtitle: "Clases particulares personalizadas para estudiantes de Educación Media y Universitaria",
   badges: [
     { text: "+5 años de experiencia", variant: "success" },
-    { text: "Ingeniero Civil", variant: "info" },
-    { text: "Clases online/presencial", variant: "warning" }
+    { text: "Ingeniero Civil Eléctrico", variant: "info" },
+    { text: "Clases online", variant: "warning" }
   ]
 };

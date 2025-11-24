@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/profe/static/css/main.3b71cc2a.css",
-    "main.js": "/profe/static/js/main.fe97a52d.js",
+    "main.js": "/profe/static/js/main.9dd96037.js",
     "static/js/453.5ccfad9d.chunk.js": "/profe/static/js/453.5ccfad9d.chunk.js",
     "static/media/meia.png": "/profe/static/media/meia.bb5d142ab624483ad3fe.png",
     "index.html": "/profe/index.html",
     "main.3b71cc2a.css.map": "/profe/static/css/main.3b71cc2a.css.map",
-    "main.fe97a52d.js.map": "/profe/static/js/main.fe97a52d.js.map",
+    "main.9dd96037.js.map": "/profe/static/js/main.9dd96037.js.map",
     "453.5ccfad9d.chunk.js.map": "/profe/static/js/453.5ccfad9d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3b71cc2a.css",
-    "static/js/main.fe97a52d.js"
+    "static/js/main.9dd96037.js"
   ]
 }

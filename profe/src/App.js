@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CalendlyScheduler from './components/CalendlyScheduler';
 import { 
@@ -9,7 +9,9 @@ import {
   Button, 
   Badge,
   Navbar,
-  ListGroup
+  ListGroup,
+  Spinner,
+  Modal
 } from 'react-bootstrap';
 import { subjectsData } from './data/subjectsData';
 import { contactInfo } from './data/contactInfo';
@@ -21,6 +23,7 @@ import miFoto from './data/images/meia.png';
 // En tu App.js - versión con la paleta profesional
 function App() {
   const isMobile = window.innerWidth < 768;
+  const [showWhatsAppLoading, setShowWhatsAppLoading] = useState(false);
 
   const sectionBackgrounds = [
     'bg-white',                    // Hero
@@ -28,6 +31,16 @@ function App() {
     'custom-primary-light',       // Procedimiento
     'bg-white',                   // Contacto
   ];
+
+  const handleWhatsAppClick = () => {
+    setShowWhatsAppLoading(true);
+    
+    // Simular un pequeño delay antes de abrir WhatsApp
+    setTimeout(() => {
+      window.open(contactInfo.whatsapp, '_blank');
+      setShowWhatsAppLoading(false);
+    }, 800);
+  };
 
   return (
     <div className="min-vh-100">
@@ -154,13 +167,25 @@ function App() {
                     </Col>
                   </Row>
                   <Button
-                    href={contactInfo.whatsapp}
-                    target="_blank"
+                    onClick={handleWhatsAppClick}
                     style={{backgroundColor: '#059669', borderColor: '#059669'}}
                     size="lg"
                     className="w-100 fw-bold py-3"
+                    disabled={showWhatsAppLoading}
                   >
-                    💬 Enviar mensaje por WhatsApp
+                    {showWhatsAppLoading ? (
+                      <>
+                        <Spinner
+                          animation="border"
+                          size="sm"
+                          role="status"
+                          className="me-2"
+                        />
+                        Abriendo WhatsApp...
+                      </>
+                    ) : (
+                      '💬 Enviar mensaje por WhatsApp'
+                    )}
                   </Button>
                 </Card.Body>
                 <Card.Footer className="text-center bg-light">
@@ -180,6 +205,25 @@ function App() {
         <p className="mb-0">© {new Date().getFullYear()} Clases Particulares - {contactInfo.name}</p>
         <small className="text-muted">Educación personalizada para tu éxito académico</small>
       </footer>
+
+      {/* Modal de Loading para WhatsApp */}
+      <Modal 
+        show={showWhatsAppLoading} 
+        centered 
+        backdrop="static" 
+        keyboard={false}
+        size="sm"
+      >
+        <Modal.Body className="text-center py-4">
+          <Spinner 
+            animation="border" 
+            variant="success" 
+            style={{ width: '3rem', height: '3rem' }}
+          />
+          <h5 className="mt-3">Abriendo WhatsApp...</h5>
+          <p className="text-muted mb-0">Preparando tu mensaje</p>
+        </Modal.Body>
+      </Modal>
 
       <WhatsAppFloat />
     </div>

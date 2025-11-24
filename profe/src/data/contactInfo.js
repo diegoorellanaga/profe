@@ -4,7 +4,7 @@ export const contactInfo = {
   phone: "+56 9 9515 7498",  // ← Cambia por tu número real
   email: "diegoorellanaga@gmail.com", // ← Cambia por tu email real
   location: "Clases Online (Santiago, Chile)",
-  experience: "+5 años de experiencia",
+  experience: "+3 años de experiencia",
   degree: "Ingeniero Civil Eléctrico",
   
   // Redes sociales (opcionales)

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/profe/static/css/main.fbd8ab24.css",
+    "main.js": "/profe/static/js/main.6da1423f.js",
+    "static/js/453.5ccfad9d.chunk.js": "/profe/static/js/453.5ccfad9d.chunk.js",
+    "index.html": "/profe/index.html",
+    "main.fbd8ab24.css.map": "/profe/static/css/main.fbd8ab24.css.map",
+    "main.6da1423f.js.map": "/profe/static/js/main.6da1423f.js.map",
+    "453.5ccfad9d.chunk.js.map": "/profe/static/js/453.5ccfad9d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbd8ab24.css",
+    "static/js/main.6da1423f.js"
+  ]
+}
